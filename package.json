@@ -34,7 +34,8 @@
   "optionalDependencies": {
     "modern-syslog":"1.1.2",
     "hashring":"3.2.0",
-    "winser": "=0.1.6"
+    "winser": "=0.1.6",
+    "@newrelic/statsd-infra-backend": "1.0.2"
   },
   "bin": {
       "statsd": "./bin/statsd"
