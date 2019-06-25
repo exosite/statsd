@@ -1,21 +1,10 @@
-StatsD [![Build Status][travis-ci_status_img]][travis-ci_statsd]
+StatsD [![Build Status][travis-ci_status_img]][travis-ci_statsd] [![Join the chat at https://gitter.im/statsd/statsd](https://badges.gitter.im/statsd/statsd.svg)](https://gitter.im/statsd/statsd?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 ======
 
 A network daemon that runs on the [Node.js][node] platform and
 listens for statistics, like counters and timers, sent over [UDP][udp] or
 [TCP][tcp] and sends aggregates to one or more pluggable backend services (e.g.,
 [Graphite][graphite]).
-
-We ([Etsy][etsy]) [blogged][blog post] about how it works and why we created it.
-
-Inspiration
------------
-
-StatsD was inspired (heavily) by the project (of the same name) at Flickr.
-Here's a post where Cal Henderson described it in depth:
-[Counting and timing][counting-timing]
-Cal re-released the code recently:
-[Perl StatsD][Flicker-StatsD]
 
 Key Concepts
 --------
@@ -27,7 +16,7 @@ etc)
 
 * *values*
   Each stat will have a value. How it is interpreted depends on modifiers. In
-general values should be integer.
+general values should be integers.
 
 * *flush*
   After the flush interval timeout (defined by `config.flushInterval`,
@@ -37,10 +26,10 @@ general values should be integer.
 Installation and Configuration
 ------------------------------
 
- * Install node.js
+ * Install Node.js (All [`Current` and `LTS` Node.js versions](https://nodejs.org/en/about/releases/) are supported.)
  * Clone the project
  * Create a config file from `exampleConfig.js` and put it somewhere
- * Start the Daemon:  
+ * Start the Daemon:
    `node stats.js /path/to/config`
 
 Usage
@@ -89,11 +78,19 @@ background (don't do this on a production machine!).
 
 Tests can be executed with `./run_tests.sh`.
 
-
-Meta
+History
 ---------
-- IRC channel: `#statsd` on freenode
-- Mailing list: `statsd@librelist.com`
+statsd was originally written at ([Etsy][etsy]) and released with a [blog post][blog post]
+about how it works and why we created it.
+
+Inspiration
+-----------
+
+StatsD was inspired (heavily) by the project (of the same name) at Flickr.
+Here's a post where Cal Henderson described it in depth:
+[Counting and timing][counting-timing]
+Cal re-released the code recently:
+[Perl StatsD][Flicker-StatsD]
 
 
 
@@ -106,14 +103,14 @@ Meta
 [Flicker-StatsD]: https://github.com/iamcal/Flickr-StatsD
 [udp]: http://en.wikipedia.org/wiki/User_Datagram_Protocol
 [tcp]: http://en.wikipedia.org/wiki/Transmission_Control_Protocol
-[docs_metric_types]: https://github.com/etsy/statsd/blob/master/docs/metric_types.md
-[docs_graphite]: https://github.com/etsy/statsd/blob/master/docs/graphite.md
-[docs_server]: https://github.com/etsy/statsd/blob/master/docs/server.md
-[docs_backend]: https://github.com/etsy/statsd/blob/master/docs/backend.md
-[docs_admin_interface]: https://github.com/etsy/statsd/blob/master/docs/admin_interface.md
-[docs_server_interface]: https://github.com/etsy/statsd/blob/master/docs/server_interface.md
-[docs_backend_interface]: https://github.com/etsy/statsd/blob/master/docs/backend_interface.md
+[docs_metric_types]: https://github.com/statsd/statsd/blob/master/docs/metric_types.md
+[docs_graphite]: https://github.com/statsd/statsd/blob/master/docs/graphite.md
+[docs_server]: https://github.com/statsd/statsd/blob/master/docs/server.md
+[docs_backend]: https://github.com/statsd/statsd/blob/master/docs/backend.md
+[docs_admin_interface]: https://github.com/statsd/statsd/blob/master/docs/admin_interface.md
+[docs_server_interface]: https://github.com/statsd/statsd/blob/master/docs/server_interface.md
+[docs_backend_interface]: https://github.com/statsd/statsd/blob/master/docs/backend_interface.md
 [docs_namespacing]: https://github.com/etsy/statsd/blob/master/docs/namespacing.md
 [docs_cluster_proxy]: https://github.com/etsy/statsd/blob/master/docs/cluster_proxy.md
-[travis-ci_status_img]: https://travis-ci.org/etsy/statsd.svg?branch=master
-[travis-ci_statsd]: https://travis-ci.org/etsy/statsd
+[travis-ci_status_img]: https://travis-ci.org/statsd/statsd.svg?branch=master
+[travis-ci_statsd]: https://travis-ci.org/statsd/statsd
